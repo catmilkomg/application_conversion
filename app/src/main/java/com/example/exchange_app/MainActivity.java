@@ -42,27 +42,27 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            double total1;
-            double total2;
-            double ammount=Double.parseDouble(ammount_Edittext.getText().toString());
+            double tot1;
+            double tot2;
+            double somme=Double.parseDouble(ammount_Edittext.getText().toString());
             if(spinner_currency.getSelectedItem().toString()=="USD"){
-                total1=ammount * 10.46;
-                total2=ammount * 0.95;
+                tot1=somme * 10.46;
+                tot2=somme * 0.95;
 
-                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" MAD");
-                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" EURO");
+                first_edit_text.setText(new DecimalFormat("##.##").format(tot1)+" MAD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(tot2)+" EURO");
             }else if(spinner_currency.getSelectedItem().toString()=="MAD"){
-                total1=ammount * 0.096;
-                total2=ammount * 0.091;
+                tot1=somme * 0.096;
+                tot2=somme * 0.091;
 
-                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" USD");
-                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" EURO");
+                first_edit_text.setText(new DecimalFormat("##.##").format(tot1)+" USD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(tot2)+" EURO");
             }else{
-                total1=ammount * 1.05;
-                total2=ammount * 11.02;
+                tot1=somme * 1.05;
+                tot2=somme * 11.02;
 
-                first_edit_text.setText(new DecimalFormat("##.##").format(total1)+" USD");
-                second_edit_text.setText(new DecimalFormat("##.##").format(total2)+" MAD");
+                first_edit_text.setText(new DecimalFormat("##.##").format(tot1)+" USD");
+                second_edit_text.setText(new DecimalFormat("##.##").format(tot2)+" MAD");
             }
 
         }
